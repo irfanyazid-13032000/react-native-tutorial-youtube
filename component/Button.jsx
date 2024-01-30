@@ -18,10 +18,12 @@ const styles = StyleSheet.create({
   button:{
     paddingBottom:16,
     paddingVerical:10,
-    borderColor:'aquamarine',
+    borderColor:'purple',
     borderWidth:2,
     borderRadius:17,
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    position:'absolute',
+    top:'50%'
   }
 })
