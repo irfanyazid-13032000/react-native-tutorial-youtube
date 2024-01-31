@@ -52,7 +52,7 @@ export default function Signup() {
             <Text>I agree to the terms and condition</Text>
           </View>
 
-          <Button title="sign up" filled style={{marginTop:18,marginBottom:4,color:"white"}}/>
+          <Button title="sign up" filled style={{marginTop:150,marginBottom:4,color:"white",width:'100%'}}/>
 
 
 

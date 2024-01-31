@@ -53,12 +53,12 @@ export default function Welcome({navigation}) {
             <Text style={{fontSize:16,color:"white",marginVertical:4}}>Calling, Enjoy Safe and Private Texting</Text>
           </View>
 
-          <Button title="Join With Us" style={{marginTop:22,paddingTop:7}} onPress={()=>navigation.navigate("Signup")}/>
+          <Button title="Join With Us" style={{marginTop:70,paddingTop:7,marginLeft:9,width:'100%'}} onPress={()=>navigation.navigate("Signup")}/>
 
-          <View style={{flexDirection:'row',marginTop:12,justifyContent:'center'}}>
-            <Text style={{fontSize:16,color:'white'}}>already have an account?</Text>
+          <View style={{flexDirection:'row',marginTop:25,justifyContent:'center'}}>
+            <Text style={{fontSize:16,color:'white',marginTop:25}}>already have an account?</Text>
             <Pressable onPress={()=>navigation.navigate("Login")}>
-              <Text style={{fontSize:16,color:'white',fontWeight:'bold'}}>Login</Text>
+              <Text style={{fontSize:16,color:'white',fontWeight:'bold',marginTop:25}}>Login</Text>
             </Pressable>
           </View>
 
