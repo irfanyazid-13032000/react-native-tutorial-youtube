@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import store from './slice/store';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
+import Profile from './screen/Profile';
 
 
 
@@ -36,7 +37,7 @@ export function TabNavigate(){
       }}
       
       />
-      <Tab.Screen name='asu' component={Todo}
+      <Tab.Screen name='profile' component={Profile}
         options={{
           tabBarLabel:({color})=> (
               <Text style={{color: color, fontSize:12, marginTop: -7}}>Home</Text>

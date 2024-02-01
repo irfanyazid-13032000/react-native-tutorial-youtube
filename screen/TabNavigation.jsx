@@ -3,6 +3,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Todo from "./Todo"
 import { FontAwesome } from '@expo/vector-icons';
+import Profile from './Profile';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ export default function TabNavigation() {
       }}
       
       />
-      <Tab.Screen name='asu' component={Todo}
+      <Tab.Screen name='Profile' component={Profile}
         options={{
           tabBarLabel:({color})=> (
               <Text style={{color: color, fontSize:12, marginTop: -7}}>Home</Text>
