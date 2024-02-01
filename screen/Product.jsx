@@ -38,7 +38,6 @@ export default function Product() {
     <View>
       <SafeAreaView />
 
-      <Text>Product</Text>
       <FlatList
         data={products}
         renderItem={({ item }) => (

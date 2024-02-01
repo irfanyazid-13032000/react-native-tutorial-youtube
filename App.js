@@ -7,8 +7,10 @@ import { Provider } from 'react-redux';
 import store from './slice/store';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
+import { MaterialCommunityIcons,MaterialIcons } from '@expo/vector-icons';
 import Profile from './screen/Profile';
 import Product from './screen/Product';
+import Logout from './util/Logout';
 
 
 
@@ -40,10 +42,22 @@ export function TabNavigate(){
       <Tab.Screen name='profile' component={Profile}
         options={{
           tabBarLabel:({color})=> (
-              <Text style={{color: color, fontSize:12, marginTop: -7}}>Home</Text>
+              <Text style={{color: color, fontSize:12, marginTop: -7}}>Profile</Text>
           ),
           tabBarIcon:({color, size})=> (
-              <FontAwesome name="home" size={27} color={color} />
+            <MaterialCommunityIcons name="face-man-profile" size={24} color={color} />
+          )
+
+      }}
+      
+      />
+      <Tab.Screen name='Logout' component={Logout}
+        options={{
+          tabBarLabel:({color})=> (
+              <Text style={{color: color, fontSize:12, marginTop: -7}}>Logout</Text>
+          ),
+          tabBarIcon:({color, size})=> (
+            <MaterialIcons name="logout" size={24} color={color} />
           )
 
       }}
