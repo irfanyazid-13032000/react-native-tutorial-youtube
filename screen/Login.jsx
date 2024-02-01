@@ -43,8 +43,7 @@ export default function Login() {
         password: password
       });
       dispatch(storeToken(response.data.data))
-      dispatch(deleteToken)
-      navigation.navigate('Signup')
+      navigation.navigate('Todo')
 
     } catch (error) {
       console.error(error);
