@@ -1,20 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {NavigationContainer} from '@react-navigation/native'
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {Login,Signup,Welcome} from './screen'
-import Todo from './screen/Todo'
-import { Provider } from 'react-redux';
-import store from './slice/store';
+import { View, Text } from 'react-native'
+import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Todo from "./Todo"
 import { FontAwesome } from '@expo/vector-icons';
 
-
-
-const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator();
 
-export function TabNavigate(){
+export default function TabNavigation() {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -52,22 +44,3 @@ export function TabNavigate(){
     </Tab.Navigator>
   )
 }
-
-
-export default function App() {
-
-  return (
-    <Provider store={store}>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='welcome'>
-        <Stack.Screen name='Welcome' component={Welcome} options={{headerShown:false}}/>
-        <Stack.Screen name='Login' component={Login} options={{headerShown:false}}/>
-        <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}/>
-        <Stack.Screen name='TabNavigate' component={TabNavigate} options={{headerShown:false}}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-    </Provider>
-  );
-}
-
-

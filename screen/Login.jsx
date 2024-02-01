@@ -9,6 +9,7 @@ import {storeToken,deleteToken} from '../slice/authSlice'
 import { useNavigation } from '@react-navigation/native';
 
 
+
 export default function Login() {
   const navigation = useNavigation()
   const dispatch = useDispatch()
@@ -20,7 +21,7 @@ export default function Login() {
   useEffect(()=>{
     console.log(token);
     if (token) {
-      navigation.navigate('Signup')
+      navigation.navigate('TabNavigate')
     }
   },[token])
 
@@ -43,7 +44,7 @@ export default function Login() {
         password: password
       });
       dispatch(storeToken(response.data.data))
-      navigation.navigate('Todo')
+      navigation.navigate('TabNavigate')
 
     } catch (error) {
       console.error(error);
