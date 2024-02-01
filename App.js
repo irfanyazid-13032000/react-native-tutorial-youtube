@@ -3,12 +3,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import {Login,Signup,Welcome} from './screen'
-import Todo from './screen/Todo'
 import { Provider } from 'react-redux';
 import store from './slice/store';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 import Profile from './screen/Profile';
+import Product from './screen/Product';
 
 
 
@@ -25,7 +25,7 @@ export function TabNavigate(){
       }}
     >
 
-      <Tab.Screen name='Todo' component={Todo}
+      <Tab.Screen name='Product' component={Product}
         options={{
           tabBarLabel:({color})=> (
               <Text style={{color: color, fontSize:12, marginTop: -7}}>Home</Text>
