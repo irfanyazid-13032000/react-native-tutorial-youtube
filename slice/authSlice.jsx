@@ -4,11 +4,13 @@ import axios from 'axios';
 const authSlice = createSlice({
   name:"auths",
   initialState:{
-    token:""
+    token:"",
+    role:""
   },
   reducers:{
     storeToken:(state,action) => {
       state.token = action.payload.token
+      state.role = action.payload.role
     },
     deleteToken:(state) => {
       state.token = ""
